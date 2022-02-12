@@ -3,12 +3,24 @@ namespace ExemplosConstrutores
 {
     class Program
     {
+        public delegate void Operacao(int a, int b);
         static void Main(string[] args)
         {
-            const double pi = 3.14;
-            System.Console.WriteLine(pi);
+            Matematica m = new Matematica(10, 20);
+            m.Somar();
 
             
+            //Operacao op = Calculadora.Somar;
+            // Operacao op = new Operacao(Calculadora.Somar);
+            // op += Calculadora.Subtrair;
+            // op.Invoke(400, 400);
+            // op.Invoke(56, 78);
+
+
+            // const double pi = 3.14;
+            // System.Console.WriteLine(pi);
+
+
             // Data data = new Data();
             // //data.SetMes(20);
 
